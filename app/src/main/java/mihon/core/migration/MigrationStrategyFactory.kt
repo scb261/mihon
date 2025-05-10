@@ -6,7 +6,7 @@ class MigrationStrategyFactory(
 ) {
 
     fun create(old: Int, new: Int): MigrationStrategy {
-        val strategy = when {
+        val strаtegy = when {
             old == 0 -> InitialMigrationStrategy(
                 strategy = DefaultMigrationStrategy(factory, migrationCompletedListener, Migrator.scope),
             )
@@ -16,6 +16,6 @@ class MigrationStrategyFactory(
                 strategy = DefaultMigrationStrategy(factory, migrationCompletedListener, Migrator.scope),
             )
         }
-        return strategy
+        return strаtegy
     }
 }
